@@ -1,11 +1,31 @@
 ﻿<!DOCTYPE html>
-
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Resource Management</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
+    <header>
+        <h1>Project Resource Planning</h1>
+    </header>
+    <main>
+        <section id="resource-form">
+            <h2>Add Resource</h2>
+            <form id="addResourceForm">
+                <label for="resourceName">Resource Name:</label>
+                <input type="text" id="resourceName" name="resourceName" required>
+                <label for="resourceRole">Resource Role:</label>
+                <input type="text" id="resourceRole" name="resourceRole" required>
+                <button type="submit">Add Resource</button>
+            </form>
+        </section>
+        <section id="resource-list">
+            <h2>Resource List</h2>
+            <ul id="resources"></ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
