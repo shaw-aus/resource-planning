@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Project Details</h1>
+    </header>
+    <main>
+        <section id="project-form">
+            <h2>Add Project</h2>
+            <form id="addProjectForm">
+                <label for="projectName">Project Name:</label>
+                <input type="text" id="projectName" name="projectName" required>
+                <label for="clientName">Client Name:</label>
+                <input type="text" id="clientName" name="clientName" required>
+                <label for="projectStartDate">Start Date:</label>
+                <input type="date" id="projectStartDate" name="projectStartDate" required>
+                <label for="projectEndDate">End Date:</label>
+                <input type="date" id="projectEndDate" name="projectEndDate" required>
+                <label for="budget">Budget:</label>
+                <input type="number" id="budget" name="budget" required>
+                <button type="submit">Add Project</button>
+            </form>
+        </section>
+        <a href="index.html">Back to Main Page</a>
+    </main>
+    <script src="project.js"></script>
+</body>
+</html>
