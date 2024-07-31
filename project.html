@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Details</title>
+    <title>Project Resource Management</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Project Details</h1>
+        <h1>Project Resource Management</h1>
     </header>
     <main>
-        <section id="project-form">
-            <h2>Add Project</h2>
-            <form id="addProjectForm">
-                <label for="projectName">Project Name:</label>
-                <input type="text" id="projectName" name="projectName" required>
-                <label for="clientName">Client Name:</label>
-                <input type="text" id="clientName" name="clientName" required>
-                <button type="submit">Add Project</button>
+        <section id="resource-form">
+            <h2>Add Resource</h2>
+            <form id="addResourceForm">
+                <label for="projectSelect">Project Name:</label>
+                <select id="projectSelect" name="projectSelect" required>
+                    <!-- Project options will be populated dynamically -->
+                </select>
+                <label for="resourceName">Resource Name:</label>
+                <input type="text" id="resourceName" name="resourceName" required>
+                <label for="resourceRole">Resource Role:</label>
+                <input type="text" id="resourceRole" name="resourceRole" required>
+                <label for="resourceEffort">Estimated Hours per Week:</label>
+                <input type="number" id="resourceEffort" name="resourceEffort" required>
+                <button type="submit">Add Resource</button>
             </form>
         </section>
-        <a href="index.html">Back to Main Page</a>
+        <section id="resource-list">
+            <h2>Resource List</h2>
+            <ul id="resources"></ul>
+        </section>
+        <a href="report.html">View Weekly Hours Report</a>
     </main>
-    <script src="project.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

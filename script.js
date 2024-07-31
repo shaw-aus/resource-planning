@@ -13,25 +13,21 @@ document.addEventListener('DOMContentLoaded', function () {
 document.getElementById('addResourceForm').addEventListener('submit', function (event) {
     event.preventDefault();
 
+    const projectIndex = document.getElementById('projectSelect').value;
     const resourceName = document.getElementById('resourceName').value;
     const resourceRole = document.getElementById('resourceRole').value;
     const resourceEffort = document.getElementById('resourceEffort').value;
-    const projectStartDate = document.getElementById('projectStartDate').value;
-    const projectEndDate = document.getElementById('projectEndDate').value;
-    const projectIndex = document.getElementById('projectSelect').value;
 
     const resourceItem = document.createElement('li');
-    resourceItem.textContent = `${resourceName} - ${resourceRole} - ${resourceEffort} hrs/week from ${projectStartDate} to ${projectEndDate}`;
+    resourceItem.textContent = `Project: ${projectSelect.options[projectSelect.selectedIndex].text} - Resource: ${resourceName} - Role: ${resourceRole} - ${resourceEffort} hrs/week`;
 
     document.getElementById('resources').appendChild(resourceItem);
 
     const resourceData = {
+        projectIndex,
         resourceName,
         resourceRole,
-        resourceEffort,
-        projectStartDate,
-        projectEndDate,
-        projectIndex
+        resourceEffort
     };
 
     let resources = JSON.parse(localStorage.getItem('resources')) || [];
